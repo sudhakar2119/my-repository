@@ -1,0 +1,9 @@
+--- 
+- hosts: all
+  gather_facts: false
+  become: yes
+  remote_user: ansible
+  become_user: root
+  tasks:
+    - name: copy the message file
+	  shell: src=/var/log/messages dest=/tmp/
